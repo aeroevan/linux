@@ -607,6 +607,13 @@ config LEDS_VERSATILE
 	  This option enabled support for the LEDs on the ARM Versatile
 	  and RealView boards. Say Y to enabled these.
 
+config LEDS_CHROMEOS_KEYBOARD
+	tristate "LED support for Chrome OS keyboards"
+	depends on LEDS_CLASS && ACPI
+	help
+	  This option enables support for the LEDs on Chrome OS keyboards.
+	  Say Y to enable keyboard LEDs on Chrome OS systems.
+
 comment "LED Triggers"
 source "drivers/leds/trigger/Kconfig"
 
